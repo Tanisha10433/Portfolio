@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pingVal = document.getElementById('ping-val');
   if (pingVal) {
     setInterval(() => {
-      const randomPing = Math.floor(Math.random() * 8) + 8; // 8ms to 15ms
+      const randomPing = Math.floor(Math.random() * 8) + 6; // 6ms to 13ms
       pingVal.textContent = `${randomPing}ms`;
     }, 4000);
   }
@@ -149,29 +149,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const terminalInput = document.getElementById('terminal-input');
   const terminalBody = document.getElementById('terminal-body');
 
-  const commands = {
-    help: 'Available commands:\n  <span class="text-cyan">about</span>    - Diagnostics bio of Tanisha\n  <span class="text-cyan">skills</span>   - List specialized programming/AIML capabilities\n  <span class="text-cyan">projects</span> - View developed software modules\n  <span class="text-cyan">contact</span>  - Print direct connection links\n  <span class="text-cyan">matrix</span>   - Trigger visual code cascade\n  <span class="text-cyan">secret</span>   - Fetch neural network hidden weights\n  <span class="text-cyan">clear</span>    - Wipe screen history logs',
+  const resumeCommands = {
+    help: 'Available commands:\n  <span class="text-cyan">about</span>        - Summary of Tanisha\'s profile\n  <span class="text-cyan">education</span>    - Noida Institute of Engineering & Technology details\n  <span class="text-cyan">skills</span>       - List of OOP, Web, DB, and AIML skills\n  <span class="text-cyan">projects</span>     - SoulH and PCOS ANN prediction projects\n  <span class="text-cyan">achievements</span> - HackerRank and LeetCode diagnostics\n  <span class="text-cyan">contact</span>      - Email, phone, and git nodes\n  <span class="text-cyan">matrix</span>       - Trigger matrix stream simulation\n  <span class="text-cyan">clear</span>        - Wipe history log',
     
-    about: 'IDENTIFIER: <span class="text-cyan">Tanisha</span>\nBRANCH: <span class="text-violet">Artificial Intelligence & Machine Learning (AIML)</span>\nSPECIALTIES:\n  - Core OOP Engineering (Java)\n  - Web Server architectures (Node.js, Express.js)\n  - Database engines (MySQL Relational schemas, MongoDB NoSQL)\n  - Pattern extraction, dataset classification and modeling.',
+    about: 'IDENTIFIER: <span class="text-cyan">Tanisha</span>\nROLE: <span class="text-violet">AIML Specialist & Full-Stack Developer</span>\nDESCRIPTION: Currently pursuing B.Tech in Artificial Intelligence & Machine Learning at NIET (2023-2027). Specializes in bridging intelligent models with web platforms.',
     
-    skills: 'CORE DIAGNOSTIC SPECIFICATIONS:\n  [Java/OOP]       ■■■■■■■■■□ 85%\n  [JavaScript]     ■■■■■■■■■■ 90%\n  [DBMS Relational]■■■■■■■■■□ 88%\n  [Node.js Engine] ■■■■■■■■■□ 85%\n  [Express Web]    ■■■■■■■■■□ 88%\n  [MySQL Schema]   ■■■■■■■■■■ 90%\n  [MongoDB NoSQL]  ■■■■■■■■□□ 82%\n  [AI/ML Models]   ■■■■■■■■□□ 80%',
+    education: 'ACADEMIC CREDENTIALS:\n  1. <span class="text-cyan">Noida Institute of Engineering and Technology (NIET)</span>\n     - B.Tech in Artificial Intelligence & Machine Learning\n     - CGPA: <span class="text-green">8.5</span> // Period: 2023 – 2027\n  2. <span class="text-violet">Gurukul Vidyapeeth</span>\n     - Class XII (CBSE) // Percentage: <span class="text-green">86%</span> // Year: 2023\n  3. <span class="text-magenta">St. Paul’s High School</span>\n     - Class X (CBSE) // Percentage: <span class="text-green">92%</span> // Year: 2021',
     
-    projects: 'ACTIVE REPOSITORIES:\n  1. <span class="text-cyan">NeuroPredict</span>\n     - Interactive 2D neural network classification boundary mapping simulator.\n  2. <span class="text-violet">QueryFlow DBMS</span>\n     - Java Swing utility analyzing indexing parameters in MySQL schemas.\n  3. <span class="text-magenta">SecureAuth Middleware</span>\n     - Express auth microservice backend backed by MongoDB clusters.',
+    skills: 'TECHNICAL METRICS:\n  - Languages:     Java, JavaScript\n  - Web Dev:       HTML, CSS, Node.js, Express.js, Tailwind CSS\n  - Databases:     MySQL, MongoDB\n  - AI / ML:       TensorFlow, Scikit-learn, Neural Networks, NLP, Deep Learning, Pandas, NumPy\n  - Developer AI:  Git, GitHub, Postman, Jupyter Notebook, Google Colab, Cursor, Claude',
     
-    contact: 'COMMUNICATION DOCK:\n  - Email:    <a href="mailto:tanisha@example.com" class="text-cyan">tanisha@example.com</a>\n  - LinkedIn: <a href="#" target="_blank" class="text-violet">linkedin.com/in/tanisha</a>\n  - GitHub:   <a href="https://github.com/Tanisha10433" target="_blank" class="text-magenta">github.com/Tanisha10433</a>',
+    projects: 'COMMITTED REPOSITORIES:\n  1. <span class="text-cyan">SoulH – Chronic Illness Peer Support Platform</span>\n     - Tech Stack: MongoDB, Express, React, Node, Tailwind, Socket.IO, JWT\n     - Details: Full-stack platform with peer discussions, doctor onboarding, and real-time chat.\n  2. <span class="text-violet">PCOS Prediction Model</span>\n     - Tech Stack: Scikit-learn, Gradio, Pandas, NumPy, ANN classifier\n     - Details: Artificial Neural Network PCOS predictor model (80% accuracy) with early stopping.',
     
-    secret: '🧠 [DIAGNOSTIC TRACE]: You have found the hidden node! \n  Weight multipliers configured successfully. AI Model accuracy increased to 99.9%. Keep coding!'
+    achievements: 'ACCOMPLISHMENTS telemetry:\n  - LeetCode:   Solved <span class="text-green">100+ problems</span> on arrays, sorting, and recursion.\n  - HackerRank: <span class="text-green">4-Star Coder</span> rank badge in algorithm challenges.\n  - Projects:   Built multiple interactive AI and full-stack deployments.',
+    
+    contact: 'COMMUNICATION NODES:\n  - Email:    <a href="mailto:tanisha10433@gmail.com" class="text-cyan">tanisha10433@gmail.com</a>\n  - Phone:    <a href="tel:+917678555143" class="text-cyan">+91-7678555143</a>\n  - LinkedIn: <a href="https://linkedin.com/in/tanisha-64059b320" target="_blank" class="text-violet">linkedin.com/in/tanisha-64059b320</a>\n  - GitHub:   <a href="https://github.com/Tanisha10433" target="_blank" class="text-magenta">github.com/Tanisha10433</a>'
   };
 
   const handleCommand = (rawInput) => {
     const cmd = rawInput.trim().toLowerCase();
     
-    // Create new elements for history
     const inputLine = document.createElement('div');
     inputLine.className = 'terminal-line';
     inputLine.innerHTML = `<span class="terminal-prompt">guest@tanisha.sys:~$</span> <span class="text-primary">${rawInput}</span>`;
     
-    // Find output area and append input history before output
     const outputContainer = terminalBody.querySelector('.terminal-output');
     outputContainer.appendChild(inputLine);
 
@@ -186,10 +186,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (cmd === 'matrix') {
       triggerMatrixEffect(responseLine);
-    } else if (commands[cmd]) {
-      responseLine.innerHTML = commands[cmd];
+    } else if (resumeCommands[cmd]) {
+      responseLine.innerHTML = resumeCommands[cmd];
     } else if (cmd !== '') {
-      responseLine.innerHTML = `<span class="text-magenta">Command not found: "${rawInput}".</span> Type <span class="text-cyan">"help"</span> for catalog.`;
+      responseLine.innerHTML = `<span class="text-magenta">Command not found: "${rawInput}".</span> Type <span class="text-cyan">"help"</span> to view diagnostic commands.`;
     }
 
     if (cmd !== '') {
@@ -198,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     terminalInput.value = '';
     
-    // Auto Scroll to bottom
     setTimeout(() => {
       terminalBody.scrollTop = terminalBody.scrollHeight;
     }, 20);
@@ -217,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
       iterations++;
       if (iterations > 20) {
         clearInterval(interval);
-        element.innerHTML = '<span class="text-green">Matrix scan compilation finished. System integrity check: OK.</span>';
+        element.innerHTML = '<span class="text-green">System matrix compilation complete. Diagnostic status: STABLE.</span>';
       }
     }, 60);
   };
@@ -229,7 +228,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Focus input on body click in the terminal area
     const terminalCard = document.querySelector('.terminal-card');
     terminalCard?.addEventListener('click', () => {
       terminalInput.focus();
@@ -237,7 +235,38 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // --- Project Filter System ---
+  // --- Scroll Reveal & Skill Dials Animation ---
+  const revealElements = document.querySelectorAll('.scroll-reveal');
+
+  const revealOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        
+        // Trigger Circular skill meter fill-ups
+        const circles = entry.target.querySelectorAll('.circle-fill');
+        circles.forEach(circle => {
+          const pct = parseInt(circle.getAttribute('data-pct'));
+          const r = parseInt(circle.getAttribute('r'));
+          const circumference = 2 * Math.PI * r;
+          const offset = circumference - (circumference * pct) / 100;
+          circle.style.strokeDashoffset = offset;
+        });
+
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px' // reveal slightly before entry
+  });
+
+  revealElements.forEach(el => {
+    revealOnScroll.observe(el);
+  });
+
+
+  // --- Project Filtering ---
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
 
@@ -268,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // --- Interactive 2D Classification Playground ---
+  // --- 2D PCOS ANN Classification Playground ---
   const lrSlider = document.getElementById('lr-slider');
   const lrVal = document.getElementById('lr-val');
   const epochsInput = document.getElementById('epochs-input');
@@ -287,35 +316,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const lossCtx = lossCanvas?.getContext('2d');
 
   let isTraining = false;
-
-  // Visual dataset configuration: 2D coordinates classified into Class A (Cyan) and Class B (Violet)
   let dataPoints = [];
   
+  // Model parameters (Decision hyperplane boundary line: w1*x + w2*y + b = 0)
+  let modelParams = { w1: 0.4, w2: -0.85, b: 0.25 };
+
   const initDataset = (noise) => {
     dataPoints = [];
     const count = 40;
     
-    // Class A (Top Left coordinates)
+    // Class A: Normal Patients (Cyan dots, top left)
     for (let i = 0; i < count / 2; i++) {
-      // Base center: x: 0.35, y: 0.35
       const rx = 0.15 + Math.random() * 0.3 + (Math.random() - 0.5) * noise;
       const ry = 0.15 + Math.random() * 0.3 + (Math.random() - 0.5) * noise;
-      dataPoints.push({ x: rx, y: ry, label: 0 }); // Cyan
+      dataPoints.push({ x: rx, y: ry, label: 0 });
     }
     
-    // Class B (Bottom Right coordinates)
+    // Class B: PCOS Diagnosed (Violet dots, bottom right)
     for (let i = 0; i < count / 2; i++) {
-      // Base center: x: 0.70, y: 0.70
       const rx = 0.55 + Math.random() * 0.3 + (Math.random() - 0.5) * noise;
       const ry = 0.55 + Math.random() * 0.3 + (Math.random() - 0.5) * noise;
-      dataPoints.push({ x: rx, y: ry, label: 1 }); // Violet
+      dataPoints.push({ x: rx, y: ry, label: 1 });
     }
   };
 
-  // Model parameters (Linear weights representing: w1*x + w2*y + b = 0)
-  let modelParams = { w1: 1, w2: -1.2, b: 0.1 };
-
-  // Slider events
   if (lrSlider) lrSlider.addEventListener('input', (e) => { lrVal.textContent = e.target.value; });
   if (epochsInput) epochsInput.addEventListener('input', (e) => { epochsVal.textContent = e.target.value; });
   if (noiseSlider) {
@@ -335,26 +359,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lossCtx.clearRect(0, 0, w, h);
 
-    // 1. Draw Decision Boundary f(x) shading
-    // Shading Class A (Cyan, above/left of line) and Class B (Violet, below/right)
+    // 1. Shading classifications regions
     for (let py = 0; py < h; py += 4) {
       for (let px = 0; px < w; px += 4) {
         const nx = px / w;
         const ny = py / h;
-        // Eval model function: w1*x + w2*y + b
         const value = modelParams.w1 * nx + modelParams.w2 * ny + modelParams.b;
         
         if (value > 0) {
-          lossCtx.fillStyle = 'rgba(6, 182, 212, 0.04)'; // Cyan tint
+          lossCtx.fillStyle = 'rgba(6, 182, 212, 0.04)';
         } else {
-          lossCtx.fillStyle = 'rgba(139, 92, 246, 0.04)'; // Violet tint
+          lossCtx.fillStyle = 'rgba(139, 92, 246, 0.04)';
         }
         lossCtx.fillRect(px, py, 4, 4);
       }
     }
 
-    // 2. Draw Grid coordinate lines
-    lossCtx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
+    // 2. Draw Grid coordinates
+    lossCtx.strokeStyle = 'rgba(6, 182, 212, 0.04)';
     lossCtx.lineWidth = 1;
     for (let i = 1; i < 5; i++) {
       const cx = w * (i / 5);
@@ -371,10 +393,10 @@ document.addEventListener('DOMContentLoaded', () => {
       lossCtx.stroke();
     }
 
-    // 3. Draw decision boundary line: w1*x + w2*y + b = 0 => y = -(w1*x + b)/w2
+    // 3. Draw boundary hyperplane: y = -(w1*x + b)/w2
     lossCtx.beginPath();
-    lossCtx.strokeStyle = 'rgba(217, 70, 239, 0.7)'; // Neon Magenta boundary
-    lossCtx.lineWidth = 2;
+    lossCtx.strokeStyle = 'rgba(217, 70, 239, 0.75)'; // Neon Magenta boundary
+    lossCtx.lineWidth = 2.5;
     for (let px = 0; px <= w; px++) {
       const nx = px / w;
       const ny = -(modelParams.w1 * nx + modelParams.b) / modelParams.w2;
@@ -384,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     lossCtx.stroke();
 
-    // 4. Draw data points
+    // 4. Draw dataset coordinates
     dataPoints.forEach(p => {
       const px = p.x * w;
       const py = p.y * h;
@@ -393,29 +415,26 @@ document.addEventListener('DOMContentLoaded', () => {
       lossCtx.arc(px, py, 5, 0, Math.PI * 2);
       
       if (p.label === 0) {
-        lossCtx.fillStyle = '#06b6d4'; // Cyan
+        lossCtx.fillStyle = '#06b6d4';
         lossCtx.shadowColor = 'rgba(6, 182, 212, 0.6)';
       } else {
-        lossCtx.fillStyle = '#8b5cf6'; // Violet
+        lossCtx.fillStyle = '#8b5cf6';
         lossCtx.shadowColor = 'rgba(139, 92, 246, 0.6)';
       }
       
       lossCtx.shadowBlur = 4;
       lossCtx.fill();
-      lossCtx.shadowBlur = 0; // reset shadow
+      lossCtx.shadowBlur = 0;
       
-      // Outline circle
       lossCtx.strokeStyle = '#040508';
       lossCtx.lineWidth = 1;
       lossCtx.stroke();
     });
   };
 
-  // Initialize dataset and draw classifier space
   if (lossCanvas) {
     initDataset(0.1);
-    // Initial bad model boundary params
-    modelParams = { w1: 0.3, w2: -0.9, b: 0.3 };
+    modelParams = { w1: 0.35, w2: -0.9, b: 0.3 };
     draw2DClassificationSpace();
     window.addEventListener('resize', draw2DClassificationSpace);
   }
@@ -427,18 +446,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const lr = parseFloat(lrSlider.value);
     const totalEpochs = parseInt(epochsInput.value);
 
-    // Target parameters that perfectly separate the dataset
-    const targetW1 = 1.25;
-    const targetW2 = -1.15;
-    const targetB = -0.05;
+    // Target weights
+    const targetW1 = 1.35;
+    const targetW2 = -1.2;
+    const targetB = -0.06;
 
-    // Reset weights to bad start state
-    modelParams = { w1: 0.3, w2: -0.9, b: 0.3 };
+    modelParams = { w1: 0.35, w2: -0.9, b: 0.3 };
 
     trainBtn.disabled = true;
-    trainBtn.innerHTML = '<i class="btn-icon spinner"></i> Optimizing...';
+    trainBtn.innerHTML = '<i class="btn-icon spinner"></i> Fitting Weights...';
     statusDot.className = 'status-indicator training';
-    statusText.textContent = 'Status: Training';
+    statusText.textContent = 'Status: Optimizing';
 
     let currentEpoch = 0;
 
@@ -446,7 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (currentEpoch >= totalEpochs) {
         isTraining = false;
         trainBtn.disabled = false;
-        trainBtn.innerHTML = '<i data-lucide="play" class="btn-icon"></i> Start Classifier Fit';
+        trainBtn.innerHTML = '<i data-lucide="play" class="btn-icon"></i> Start PCOS Model Fit';
         if (typeof lucide !== 'undefined') lucide.createIcons();
         statusDot.className = 'status-indicator complete';
         statusText.textContent = 'Status: Complete';
@@ -455,18 +473,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       currentEpoch++;
 
-      // Gradient descent wiggles: approach target weights at speed based on learning rate
+      // Gradient updates wiggles
       const stepSpeed = lr * 2.5;
       modelParams.w1 += (targetW1 - modelParams.w1) * stepSpeed;
       modelParams.w2 += (targetW2 - modelParams.w2) * stepSpeed;
       modelParams.b += (targetB - modelParams.b) * stepSpeed;
 
-      // Simulated Loss / Accuracy calculations
       const diff = Math.abs(modelParams.w1 - targetW1) + Math.abs(modelParams.w2 - targetW2);
-      const simulatedLoss = Math.max(0.005, diff * 0.45 + (Math.random() - 0.5) * 0.015);
-      const simulatedAcc = Math.min(100, Math.max(45, 100 - diff * 45 + (Math.random() - 0.5) * 2));
+      const simulatedLoss = Math.max(0.005, diff * 0.42 + (Math.random() - 0.5) * 0.015);
+      const simulatedAcc = Math.min(100, Math.max(40, 100 - diff * 42 + (Math.random() - 0.5) * 2.5));
 
-      // Update HUD interface values
       epochNum.textContent = currentEpoch;
       lossNum.textContent = simulatedLoss.toFixed(4);
       accNum.textContent = simulatedAcc.toFixed(1) + '%';
@@ -484,7 +500,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // --- Form handling and validations ---
+  // --- Form validations ---
   const form = document.getElementById('contact-form');
   const successMsg = document.getElementById('form-success-msg');
   const submitBtn = document.getElementById('submit-btn');
