@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   if (mobileToggle) mobileToggle.addEventListener('click', openMobileMenu);
-  if (mobileClose) mobileClose.addEventListener('click', mobileClose);
+  if (mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
   mobileNavLinks.forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
